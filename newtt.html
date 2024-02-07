@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equação Quadrática</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Equação Quadrática</h2>
+
+  <form>
+    <label for="coeficienteA">Coeficiente de x^2: </label>
+    <input type="number" id="coeficienteA" name="coeficienteA" oninput="updateEquacao()">
+    
+    <label for="coeficienteB">Coeficiente de x: </label>
+    <input type="number" id="coeficienteB" name="coeficienteB" oninput="updateEquacao()">
+
+    <label for="coeficienteC">Termo constante: </label>
+    <input type="number" id="coeficienteC" name="coeficienteC" oninput="updateEquacao()">
+
+    <p id="equacaoResultado"></p>
+  </form>
+
+  <script>
+    function updateEquacao() {
+      const coeficienteA = document.getElementById('coeficienteA').value;
+      const coeficienteB = document.getElementById('coeficienteB').value;
+      const coeficienteC = document.getElementById('coeficienteC').value;
+
+      const termoX2 = coeficienteA ? `${coeficienteA}x^2` : '';
+      const termoX = coeficienteB ? `${coeficienteB > 0 ? '+' : ''}${coeficienteB}x` : '';
+      const termoC = coeficienteC ? `${coeficienteC > 0 ? '+' : ''}${coeficienteC}` : '';
+
+      const equacaoResultado = document.getElementById('equacaoResultado');
+      equacaoResultado.textContent = `Primeira Equação: ${termoX2} ${termoX} ${termoC}`;
+    }
+  </script>
+
+</body>
+</html>

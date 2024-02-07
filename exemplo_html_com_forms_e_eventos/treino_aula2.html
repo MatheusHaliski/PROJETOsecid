@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var a=[1,2,3,4,5];
+            var theValue=4;
+            function myfunction(){
+            var n=0;
+            var x=0;
+            while (n<3){
+                n++;
+                x+=n;
+                console.log(n);
+                console.log(x);
+            }
+            }
+            function set_break(){
+                for(let i=0;i<a.length;i++){
+                    console.log(a[i]);
+                    if(a[i]===theValue){
+                        break;
+                    }
+                }
+            }
+            function set_continue(){
+                let i=0;
+                let n=0;
+                while(i<5){
+                    i++;
+                    console.log("i:"+i);
+                    if(i===3){
+                        continue;
+                    }
+                    n+=i;
+                    console.log("n:"+n);
+                }
+            }
+                let x=0;
+                let z=0;
+                labelCancelloops: while(true){
+                    console.log("Outer loops:",x);
+                    x+=1;
+                    z=1;
+                    while (true){
+                        console.log("Inner loops:",z);
+                        z+=1;
+                        if(z===10&&x===10){
+                            break labelCancelloops;
+                        }else if (z===10){
+                            break;
+                        }
+                        }
+                    }
+                    let i=0;
+                    let j=10;
+                    checkiandj: while(i<4){
+                        console.log(i);
+                        i+=1;
+                    checkj: while(j>4){
+                        console.log(j);
+                        j-=1;
+                        if (j%2===0){
+                            continue checkj;
+                        }
+                        console.log(j,"is odd.")
+                    }
+                    console.log("i=",i);
+                    console.log("j=",j);
+                }
+                function dumpProps(obj,objName){
+                    let result="";
+                    for (const i in obj){
+                        let ik=i+1;
+                        result+= `${objName}.${ik}=${obj[i]}<br>`;
+                    }
+                    result+="<hr>";
+                    return result;
+                }
+                result=dumpProps(a,"posição");
+                console.log(result);
+        </script>
+    </body>
+</html>

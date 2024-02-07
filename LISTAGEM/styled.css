@@ -1,0 +1,337 @@
+    #ao9{
+        background-color: #277db9;
+        height:7200px;
+        width:150px;
+        position: absolute;
+        left:0px;
+        top:215px;
+    }
+    #df3{
+        height:7200px;
+        width:1480px;
+        position: absolute;
+        left:380px;
+        top:220px;
+    }
+    #btn3s{
+        border-collapse: collapse;
+        position: absolute;
+        top:600px;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+       #btn3d{
+        border-collapse: collapse;
+        position: absolute;
+        top:700px;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+    #btn1{
+        border-collapse: collapse;
+        position: absolute;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+       #btn2{
+        border-collapse: collapse;
+        position: absolute;
+        top:100px;
+        left:0px;
+        width:130px;
+        height:100px;
+        border-radius: 5px;
+       }
+       #btn5{
+        border-collapse: collapse;
+        position: absolute;
+        top:400px;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+       #btn3{
+        border-collapse: collapse;
+        position: absolute;
+        top:200px;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+       #btn4{
+        border-collapse: collapse;
+        position: absolute;
+        top:300px;
+        left:0px;
+        width:130px;
+        height:100px;
+       }
+    #btn11{
+        background-color: #277db9;
+        border-collapse: collapse;
+        display: none;
+        position:absolute;
+        top:0px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn12{
+        background-color: #277db9;
+        border-block-width: 1px;
+        display: none;
+        position:absolute;
+        top:100px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn13{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:200px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn14{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:290px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn15{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:390px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn16{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:490px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn17{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:590px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn18{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:690px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn19{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:790px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn20{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:890px;
+        left:150px;
+        width:150px;
+        height:100px;
+       }
+       #btn21{
+        background-color: #277db9;
+        display: none;
+        position:absolute;
+        top:990px;
+        left:150px;
+        width:150px;
+        height:50px;
+       }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 20px;
+        }
+        nav {
+            position: absolute;
+            top:140px;
+            left:0px;
+            width:110%;
+            margin: 0;
+            background-color: #b9c8d3;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+    
+        nav a {
+            display: inline-block;
+                padding: 10px 20px;
+                color: #fff;
+                text-decoration: none;
+                margin: 10 10px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+        }
+        a{
+            text-align: center;
+            display: inline-table;
+            font-family: Arial, sans-serif;
+            padding-top: 20px;
+            color: #fff;
+            text-decoration: none;
+            margin: 10 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 2;
+        }
+        nav a:hover {
+            background-color: #d3d9df;
+        }
+         a:hover {
+            background-color: #d3d9df;
+        }
+        #btn11:hover {
+            background-color: #d3d9df;
+        }
+        #btn12:hover{
+            background-color: #d3d9df;
+        }
+        #btn13:hover{
+            background-color: #d3d9df;
+        }
+        #btn14:hover{
+            background-color: #d3d9df;
+        }
+        #btn15:hover{
+            background-color: #d3d9df;
+        }
+        #btn16:hover{
+            background-color: #d3d9df;
+        }
+        #btn17:hover{
+            background-color: #d3d9df;
+        }
+        #btn18:hover{
+            background-color: #d3d9df;
+        }
+        #btn19:hover{
+            background-color: #d3d9df;
+        }
+        #btn20:hover{
+            background-color: #d3d9df;
+        }
+        #btn21:hover{
+            background-color: #d3d9df;
+        }
+        header {
+            position: absolute;
+            left:0px;
+            width:110%;
+            margin: 0;
+            background-color: #3498db;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        table {
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left:0px;
+            position: relative;
+            right:150px;
+            background-color: rgba(252, 249, 249, 0.932);
+            box-shadow: 0 4px 8px rgba(248, 245, 245, 0.932);
+            z-index: 1;
+        }
+    
+        th, td {
+            text-align: center;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        th {
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+    
+        tr:hover {
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .table-container {
+            position: absolute;
+            left:150px;
+            top:100px;
+            width:100%;
+            flex: 1;
+            padding: 120px;
+    
+        }
+        .btn4 {
+            width: 950px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn4:hover{
+            background-color: #f5f5f5;
+        }
+        button {
+            background-color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #f5f5f5;
+        }
+        #f1{
+            position: absolute;
+            top:310px;
+            left:260px;
+        }
+        #sub1{
+            background-color: #fff;
+            padding: 10px;
+            border-radius:20px;
+            width:100px;
+            cursor: pointer;
+        }
+        #sub1:hover{
+            background-color: #f5f5f5;
+        }
+        #ww2{
+            text-align: center;
+            font-size: xx-large;
+            font-stretch: expanded;
+        }

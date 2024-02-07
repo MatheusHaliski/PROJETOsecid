@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Aula 02 - Regex</title>
+        <style>
+    body {
+        color: #FFF;
+     font-size: 25px;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ .textbox {
+     font-size: 25px;
+ }
+ .buttons {
+     font-size: 20px;
+     width: 100px;
+     height: 35px;
+ }
+        </style>
+    </head>
+    <body bgcolor="#009900">
+        <p align="center">Expressões Regulares - Regex</p>
+        <form name="form1" id="form1" action="" enctype="text/plain" method="get" onsubmit="return cmdSendOnClick();">
+            <input type="text" id="txtText" name="txtText" style="width: 600px;" class="textbox"/><br><br>
+            <input type="submit" id="cmdSend" name="cmdSend"  value="Enviar" class="buttons"/>
+        </form>
+    </body>
+    <script>
+        function cmdSendOnClick() {
+            let cep=form1.txtText.value;
+            if (test44(cep)){
+                alert('É valido');
+
+            }
+            else{
+                alert('Falhou...');
+            }
+        }
+        function test44(cep){
+            const re=/^\d{0,2}\d{0,2}\.?\d{3}\.\d{3}\/\d{4}\-\d{2}$/;
+            return re.test(cep);
+        }
+        function testando14(cep){
+            const re=/^(0{1}[1-9]{1}|[1-2]{1}[0-9]{1}|3{1}[0-1]{1})\/(0{1}[1-9]{1}|1{1}[0-2]{1})\/[0-9]{1}[0-9]{1}$/;
+            return re.test(cep);
+        }
+
+        function testando13(cep){
+            const re=/^\w*o+\b$/;
+            return re.test(cep);
+        }
+        function testando12(cep){
+            const re=/^\b[AEIOUaeiou]+\D*[AEIOUaeiou]+\b$/;
+            return re.test(cep);
+        }
+        function testando1(cep){
+            const re=/^[^0-9]+$/;
+            return re.test(cep);
+        } 
+        function testando2(cep){
+            const re=/^\bb+\D+b\b$/;
+            return re.test(cep);
+        }
+        function testando3(cep){
+            const re=/^\w.*C\b$/;
+            return re.test(cep);
+        }
+        function isCEPex1(cep){
+            const re=/^\d{3}\.?\d{3}\.?\d{3}\/?\d{2}$/;
+            return re.test(cep);
+        }
+        function isCEPex2(cep){
+            const re=/^\d{3}(\.|[ \b])?\d{3}(\.|[ \b ])?\d{3}(\-|\/)?\d{2}$/;
+            return re.test(cep);
+        }
+        function isSome(cep){
+            const re=/^\d{2}\.?\d{3}-?\d{3}$/;
+            return re.test(cep);
+        }
+        function exercicio3letraA(cep){
+            const re=/^\D*\o+(\o|[ \b])?$/;
+            return re.test(cep);
+        }
+        function exercicio3letraB(cep){
+            const re=/^[aeiou]+(\D*[aeiou]+)?[ \b]*$/;
+            return re.test(cep);
+        }
+        function exercicio4(cep){
+            const re=/(^[0]{1}[1-9]{1}|([1]{1}[0-9]{1}|([2]{1}[0-9]{1}|[3]{1}[0-1]{1})))\/([0]{1}[1-9]{1}|[1]{1}[0-2]{1})\/[0-9]{1}[0-9]{1}[0-9]{1}[0-9]{1}$/;
+            const re3=/^([0-2]{1}[0-9]{1}|[3]{1}[0-1]{1})\/([0]{1}[0-9]{1}|[1]{1}[0-2]{1})\/[1-2]{1}[0-9]{1}[0-9]{1}[0-9]{1}$/;
+            const re2=/^\d{2}\/\d{2}\/\d{4}$/;
+            return re3.test(cep);
+        }
+        function exercicio5(cep){
+            const re=/^[0-2]{1}?[0-5]{1}?[0-5]{1}\.[0-2]{1}?[0-5]{1}?[0-5]{1}\.[0-2]{1}?[0-5]{1}?[0-5]{1}\.[0-2]{1}?[0-5]{1}?[0-5]{1}$/;
+            return re.test(cep);
+        }
+        function isEmail(email){
+            const re=/^\w.+@\w{3}\.\w{2,3}$/;
+            return re.test(email);
+        }
+    </script>
+</html>

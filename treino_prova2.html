@@ -1,0 +1,342 @@
+<html>
+<body>
+<input type="button" id="btn" onclick="clicado()" value="Clique Aqui"></input>
+<form id="form1" name="form1" onsubmit="return verificacao()" action="http://127.0.0.1:5500/aula2.html" method="GET" enctype="text/plain" >
+<input id="txt" type="textbox"></input>
+<input id="bbb" type="submit" value="Clique" onclick="return verificacao()"></input>
+</form>
+<script>
+function clicado(){
+    let button = document.getElementById("btn");
+    button.value = "Clicado"
+}
+function verificacao(){
+    let bbv = document.getElementById("txt");
+    if (bbv.value.length>=5){
+        console.log("submit feito");
+        return true
+    }else{
+        alert("Faltam digitos")
+        return false
+    }
+}
+
+somar = function(a,b){
+    return a+b
+}
+console.log(somar(2,3));
+subtrair = function(a,b){
+    return a-b
+}
+console.log(subtrair(2,3));
+multiplicar = function(a,b){
+    return a*b
+}
+console.log(multiplicar(2,3));
+dividir = function(a,b){
+    return a/b
+}
+console.log(dividir(2,3));
+function calcular(a,b,somar){
+    return somar(a,b)
+}
+console.log(calcular(2,3,somar));
+verif_tipo_triangulo=function(a,b,c){
+    let type;
+    let hipot;
+    verif_1 = function(){
+    if (a!==b && b!==c && a!==c){
+        console.log("É triângulo retângulo");
+        type="r";
+    }}
+    verif_2=function(){ if (a===b && b===c && a===c){
+        console.log("É triângulo equilátero");
+        type="e";
+    }}
+    verif_3= function(){ if (a!==b && b==c ||b!==c && a==c ||a!==c && a==b){
+        console.log("É triângulo isósceles");
+        type="i";
+    }}
+    calcula_hipot = function(){
+        if (type==="r"){
+            if (a>b && a>c){
+                hipot = Math.sqrt((b**2)+(c**2));
+            }else if (b>c && b>a){
+                hipot = Math.sqrt((c**2)+(a**2));
+            }else{
+                hipot = Math.sqrt((a**2)+(b**2));
+            }
+        }
+    console.log(hipot);
+    }
+    return{
+        verif_1:verif_1,
+        verif_2:verif_2,
+        verif_3:verif_3,
+        calcula_hipot:calcula_hipot
+    }
+}
+    let veric = verif_tipo_triangulo(2,4,5);
+    veric.verif_1();
+    veric.verif_2();
+    veric.verif_3();
+    veric.calcula_hipot();
+    let pessoa = {nome:"Joao",idade:30};
+    for (let chave in pessoa){
+        if (pessoa[chave]=="Joao"){
+            console.log("Encontrei");
+        }}
+
+    function verifica_pode_jogar(person) {
+  function va() {
+    if (person.altura >= 1.90) {
+      console.log("Altura OK");
+    } else {
+      console.log("Altura NOT OK");
+    }
+  }
+
+  function vi() {
+    if (person.idade >= 21) {
+      console.log("Idade OK");
+    } else {
+      console.log("Idade NOT OK");
+    }
+  }
+
+  function vs() {
+    if (person.sexo === "masculino") {
+      console.log("Sexo OK");
+    } else {
+      console.log("Sexo NOT OK");
+    }
+  }
+return{
+    va:va,
+    vi:vi,
+    vs:vs
+}
+}
+
+// Defina um objeto 'person' com os atributos necessários
+let person = {
+  altura: 1.95,
+  idade: 25,
+  sexo: "masculino",
+};
+
+// Chame a função para verificar se a pessoa pode jogar
+let verif = verifica_pode_jogar(person);
+verif.va();
+
+    verif_ano = function (){
+        let idade;
+        let ano_nasc;
+        set_idade = function (newidade){
+            idade = newidade;
+        }
+        get_idade = function(){
+            return idade;
+        }
+        calc_ano_nasc = function(){
+            ano_nasc = 2023 - idade;
+            return ano_nasc
+        }
+        return {  
+             set_idade:set_idade,
+            get_idade:get_idade,
+            calc_ano_nasc:calc_ano_nasc
+        };
+    }
+    let verifano = verif_ano();
+    verifano.set_idade(25);
+    console.log(verifano.get_idade());
+    console.log(verifano.calc_ano_nasc());
+    function verificar_tipo_num(a){
+        for (item in a){
+            if (item%3==0){
+                console.log("It is multiple of 3")
+            }
+            else if (item%2!==0){
+                console.log("It is odd")
+            }
+            else{
+                console.log("It is even")
+            }
+        }
+    }
+    set_ba= function (){
+        let balance;
+        let name;
+        let dt_nascimento;
+             setname= function (newname){
+                name = newname;
+            }
+            setdb = function (newdb){
+                dt_nascimento=newdb;
+            }
+            setia = function (newa){
+                if (newa<=2000){
+                balance = newa;
+            }else {
+                console.log("Error");
+            }
+        }
+            getbalance = function (){
+                if (balance!==undefined){
+                    return balance
+                }else{
+                    return "Error"
+                }        
+            }
+            getinfo = function (){
+                return [name,dt_nascimento]
+            }
+
+            return {
+            setname:setname,
+            setdb:setdb,
+            getinfo:getinfo,
+            setia:setia,
+            getbalance:getbalance
+        };
+        }
+        let myaccount = set_ba();
+        myaccount.setname("Matheus");
+        myaccount.setdb("14-05");
+        myaccount.setia(3000);
+        console.log(myaccount.getbalance());
+        console.log(myaccount.getinfo());
+    function calcula_raizes(a,b,c){
+         function delta(a,b,c){
+            let deltacalc=(b*b)-(4*a*c);
+            return deltacalc;
+        }
+            d=delta(a,b,c);
+            console.log(d);
+        if (d<0){
+            console.log("Raízes imaginárias");
+        }else if(d==0){
+            let raiz1 = -b/2*a;
+            console.log(raiz1);
+        }else if(d>0){
+            let raiz1=((-b+Math.sqrt(d))/(2*a));
+            let raiz2=((-b-Math.sqrt(d))/(2*a));
+            console.log(raiz1);
+            console.log(raiz2);
+        }
+    }
+    console.log("Raízes:")
+    calcula_raizes(1,8,1);
+    function calcula_area_volume(r,h){
+        const pi=3.14;
+        let volumetotal;
+        let arealateral;
+        let areabase;
+        let areatotal;
+        function area(r,h){
+            arealateral = (pi) * (2) * (r) * (h);
+            areabase = (2) * (pi) * (r**2);
+            areatotal = (arealateral) + (areabase);
+            return areatotal
+        }
+        function volume(r,h){
+            volumetotal = pi * (r**2) * h;
+            return volumetotal
+        }
+        let calcarea = area(r,h);
+        let calcvol = volume(r,h);
+        console.log("A area é:"+calcarea+" O volume é:"+calcvol);
+    }
+    function calcula_IMC(peso,altura){
+            if (altura<=0){
+                return false
+            }else{
+                let IMC = peso / (altura**2);
+                return IMC 
+            }
+        }
+    function conversor_moeda(reais){
+        dolar = function converte_pdolar(reais){
+            return (reais/5.10)
+        }
+        valor_em_dolar = dolar(reais);
+        iene = function converte_piene(reais){
+            return ((1/0.034)*reais)
+        }
+        valor_em_iene = iene(reais);
+        peso_arg = function converte_parg(reais){
+            return ((1/0.0142)*reais)
+        }
+        valor_em_parg = peso_arg(reais);
+        console.log("Dolar:"+valor_em_dolar);
+        console.log("Iene:"+valor_em_iene);
+        console.log("Peso Arg:"+valor_em_parg);
+    }
+    function calc_area_per_ret(a,b){
+        arearet = function area(a,b){
+            return a*b
+        }
+        perret=function per(a,b){
+            return ((2*a)+(2*b))
+        }
+        area=arearet(a,b);
+        perimetro=perret(a,b);
+        console.log(area);
+        console.log(perimetro);
+    }
+    function tabuada(n){
+        function create_array(){
+            let a = new Array(10);
+            return a
+        }
+        let aa = create_array();
+        for(let i=0;i<aa.length;i++){
+            aa[i]=(n*i);
+        }
+        return aa;
+    }
+    function multiply(a,b){
+        b=typeof b!=="undefined"?b:1;
+        return a*b;
+    }
+    
+    const createPet = function () {
+  let sex;
+
+  function setName(newName) {
+    name = newName;
+  }
+
+  function getName() {
+    return name;
+  }
+
+  function getSex() {
+    return sex;
+  }
+
+  function setSex(newSex) {
+    if (typeof newSex === "string" && (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")) {
+      sex = newSex;
+    }
+  }
+
+  // Return an object with the public methods
+  return {
+    setName: setName,
+    getName: getName,
+    getSex: getSex,
+    setSex: setSex,
+  };
+};
+
+const mypet = createPet();
+mypet.setName("Alex");
+mypet.setSex("male");
+
+console.log("Name:", mypet.getName());
+console.log("Sex:", mypet.getSex());
+</script>
+</body>
+</html>
